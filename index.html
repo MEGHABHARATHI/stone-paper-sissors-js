@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>ROCK PAPER SICSSOR GAME</p>
+    <button onclick="rock()">rock</button>
+    <button onclick="paper()">paper</button>
+    <button onclick="scissor()">scissor</button>
+    <button onclick="score.win=0,
+    score.losses=0,
+    score.tie=0 " >Reset</button>
+
+    <script>
+        const score= {
+            win:0,
+            losses:0,
+            tie:0
+        }
+        function rn()
+        {
+            var rn=Math.round((Math.random()*10))
+            
+            
+
+            if(rn>=0 && rn<=3){
+                return "rock";
+            }
+            else if(rn>=4 && rn<=6){
+                return "paper";  
+            }
+            else if(rn>=7 && rn<=9){
+                return "scissor"               
+            }
+        }
+        function rock()
+        {
+            var cm=rn()
+            var res=" "
+            if(cm === "rock"){
+                res="TIE"
+                score.tie++;
+                
+            }
+            else if(cm==="paper"){
+                res="you LOSE"
+                score.losses++;
+            }
+            else if(cm === "scissor"){
+                res="you WIN"
+                score.win++;
+            }
+
+            alert(`my move ROCK. computer move ${cm}.${res}
+points win:${score.win} losses${score.losses} tie:${score.tie}`)
+            
+        }
+        function paper()
+        {
+            var cm=rn()
+            var res=" "
+            if(cm === "rock"){
+                res="you WIN"
+                score.win++;
+            }
+            else if(cm==="paper"){
+                res="TIE"
+                score.tie++;
+            }
+            else if(cm === "scissor"){
+                res="you LOSE"
+                score.losses++;
+            }
+
+            alert(`my move PAPER. computer move ${cm}.${res}]
+points win:${score.win} losses${score.losses} tie:${score.tie}`)
+            
+        }
+        function scissor()
+        {
+            var cm=rn()
+            var res=" "
+            if(cm === "rock"){
+                res="you Lose"
+                score.losses++;
+            }
+            else if(cm==="paper"){
+                res="you WIN"
+                score.win++;
+            }
+            else if(cm === "scissor"){
+                res="TIE"
+                score.tie++;
+            }
+
+            alert(`my move SCISSOR. computer move ${cm}.${res}
+points win:${score.win} losses${score.losses} tie:${score.tie}`)
+            
+        }
+
+    </script>
+</body>
+</html>
