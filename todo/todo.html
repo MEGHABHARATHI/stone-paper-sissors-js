@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <h5>Todo List 1 (Console-based)</h5>
+    <input type="text" id="todo-input" placeholder="Enter a task" onkeydown="if(event.key === 'Enter'){ addTodo(); }">
+    <br>
+    <button onclick="addTodo()" class="add-btn">Add</button>
+    <button onclick="delTodo()" class="log-btn">Delete</button>
+
+    <hr>
+
+    <h5>Todo List 2 (Simple List)</h5>
+    <input type="text" id="todo-input2" placeholder="Enter a task" onkeydown="if(event.key === 'Enter'){ addTodo2(); }">
+    <button onclick="addTodo2()" class="add-btn2">Add</button>
+    <ul id="todo-list">
+        </ul>
+
+    <hr>
+
+    <h2>TODO LIST with Date</h2>
+    <div class="todo-grid-container">
+        <input type="text" id="todo-input3" placeholder="Enter a task">
+        <input type="date" id="date-input">
+        <button onclick="addTodo3()" class="add-btn3">Add</button>
+    </div>
+    <div id="todo-list3" class="todo-list-grid">
+        </div>
+
+    <script src="todo.js"></script>
+</body>
+</html>
