@@ -44,6 +44,8 @@ function del(e) {
 }
 
 // Functions for Todo List 3
+let addbtn=document.querySelector('.addbtn');
+addbtn.addEventListener('click',addTodo3);
 function addTodo3() {
     const input = document.getElementById('todo-input3');
     const dateInput = document.getElementById('date-input');
@@ -55,7 +57,8 @@ function addTodo3() {
         let todoItem = document.createElement('div');
         todoItem.classList.add('todo-item-grid');
 
-        todoItem.innerHTML = `<p>${taskText}</p><p>${dateText}</p><button class="del-btn" onclick='del(event)'>delete</button>`;
+        todoItem.innerHTML = `<p>${taskText}</p><p>${dateText}
+        </p><button class="del-btn" onclick='del(event)'>delete</button>`;
 
         todoListDiv.appendChild(todoItem);
 
@@ -63,3 +66,4 @@ function addTodo3() {
         dateInput.value = "";
     }
 }
+        document.querySelector('.del-btn').addEventListener('click', del(e));

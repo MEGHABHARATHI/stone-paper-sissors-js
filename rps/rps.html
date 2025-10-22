@@ -8,18 +8,24 @@
 </head>
 <body>
   <h2 class="title">ROCK PAPER SCISSOR GAME</h2>
-  <button class="icon-btn" onclick="play('rock')"><img src="images/rock.jpeg" class="icon" ></button>
-  <button class="icon-btn" onclick="play('paper')"><img src="images/paper.jpeg" class="icon"></button>
-  <button class="icon-btn" onclick="play('scissor')"><img src="images/scissor.jpeg" class="icon"></button>
-  <br><br>
+  <button class="icon-btn rock" >
+  <img src="rock.jpeg" class="icon">
+</button>
+<button class="icon-btn paper" >
+  <img src="paper.jpeg" class="icon">
+</button>
+<button class="icon-btn scissor" >
+  <img src="scissor.jpeg" alt="scissorimg" class="icon">
+</button><br><br>
 
   <p id="result" class="result"></p>
   <p id="message"></p>
   <p id="score" class="result"></p>
 
-    <button onclick="resetScore()" class="reset-btn">Reset</button>
-  <script src="rps.js">
-    
-  </script>
+  <button  class="reset-btn">Reset</button>
+  <button class="autoplay reset-btn">auto play</button>
+
+
+  <script src="rps.js"></script>
 </body>
 </html>

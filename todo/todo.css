@@ -64,11 +64,7 @@ button {
     margin-bottom: 10PX;
 }
 
-.todo-list-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-}
+
 
 .todo-item-grid {
     background-color: #fff;
